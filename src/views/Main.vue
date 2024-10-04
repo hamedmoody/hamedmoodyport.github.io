@@ -11,6 +11,7 @@
       </g>
     </svg>
     <div class="container" id="header-content">
+      <div class="code-background" :style="'background-image: url(\'' + code_background + '\')'"></div>
       <div class="header-right">
         <picture>
           <img src="~@/assets/images/hamedmoody-curved.png" alt="Hamed Moodi" width="562" height="732">
@@ -60,11 +61,12 @@
 </template>
 
 <script>
+import code_background from '@/assets/images/Header-backround.png';
 export default {
   name: "Main",
   data() {
     return {
-
+      code_background: code_background,
     }
   },
   mounted() {
@@ -101,6 +103,7 @@ export default {
 <style scoped lang="scss">
   #header{
     position: relative;
+    overflow: hidden;
     .header-curve{
       position: absolute;
       width: 300px;
@@ -113,14 +116,15 @@ export default {
       grid-template-columns: 480px auto;
       align-items: center;
       gap: 30px;
-      &:before{
+      .code-background{
         content: "";
         position: absolute;
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
-        background:  url('./src/assets/images/Header-backround.png') no-repeat left center;
+        background-repeat: no-repeat;
+        background-position: left center;
         opacity: .1;
         z-index: -1;
       }
