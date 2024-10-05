@@ -46,10 +46,12 @@
         </p>
         <div class="header-text">
           <p>
-            زمینه هایی که در گذشته کار کردم بیشتر در حوزه گرافیک مثل فتوشاپ و افترافکتز بود ولی کم کم وارد حوزه برنامه نویسی شدم و بعد از یادگیری تخصصی Html,Css,Js,jQuery و حتی طراحی رابط کاربری (با فتوشاپ و Adobe Xd) وارد حوزه Backend با زبان PHP شدم .
+            بنده حامد مودی، برنامه نویس PHP و افزونه نویس و طراح قالب وردپرس و مدرس دوره های دانشجویار هستم
+          </p>
+          <p>
             از بین فریم ورک ها و Cms ها رفتم سراغ وردپرس و به صورت تخصصی در حوزه Plugin Development و Theme Development فعالیت کردم.
-            در حال حاضر هم به بزرگترین نمونه کارم یعنی سیستم هسته دانشجویار میتونم اشاره کنم و فعالیت شغلی هم در دانشجویار (هم تدریس و هم کدنویسی) ادامه داره
-            <br>
+          </p>
+          <p>
             شیوه تدریس بنده هم از پایه با ارائه جزئیات که سعی میکنم کامل یه موضوعی رو پله پله به مخاطب انتقال بدم
           </p>
         </div>
@@ -59,6 +61,21 @@
           </svg>
           دوره های آموزشی من
         </a>
+
+        <div class="ide">
+          <div class="ide-header">
+            <div class="ide-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="ide-title">index.php</div>
+          </div>
+          <div class="ide-content">
+            &lt;?php echo 'Hamed Moodi';
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -157,11 +174,14 @@ export default {
         font-size: 42px;
       }
       .header-subtitle{
-        font-weight: bold;
+        color: #989898;
       }
       .header-text{
         line-height: 200%;
         margin: 25px 0;
+        p{
+          margin-top: 15px;
+        }
       }
       .see-courses {
         background: var(--color-primary);
@@ -222,6 +242,43 @@ export default {
     }
 
 
+  }
+
+  .ide {
+    margin-top: 15px;
+    direction: ltr;
+    background: #151718;
+    color: #FFF;
+    border-radius: 15px;
+    padding: 15px;
+    .ide-header {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    .ide-dots{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: relative;
+      span {
+        background: #FF5F56;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        &:nth-child(2) {
+          background: #FFBD2E;
+        }
+        &:nth-child(3) {
+          background: #27C93F;
+        }
+      }
+
+      .ide-content {
+        padding: 10px 0 0 10px;
+      }
+    }
   }
 
   @media screen and ( min-width: 996px ){
