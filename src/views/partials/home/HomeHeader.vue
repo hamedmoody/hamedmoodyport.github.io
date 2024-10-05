@@ -94,6 +94,7 @@ export default {
   },
   mounted() {
     this.start_cursor_animate();
+    //alert( window.innerWidth );
   },
   methods: {
     start_cursor_animate(){

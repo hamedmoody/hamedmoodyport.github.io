@@ -1,15 +1,16 @@
 <template>
-  <Header></Header>
+  <HeaderHeader/>
   <HomeStatistic/>
-
+  <SkillRates/>
 </template>
 
 <script>
-import Header from "@/views/partials/home/HomeHeader.vue";
+import HeaderHeader from "@/views/partials/home/HomeHeader.vue";
 import HomeStatistic from "@/views/partials/home/HomeStatistic.vue";
+import SkillRates from "@/views/partials/home/SkillRates.vue";
 export default {
   name: "HomeView",
-  components: {Header, HomeStatistic},
+  components: {HeaderHeader, HomeStatistic, SkillRates},
   data() {
     return {
 

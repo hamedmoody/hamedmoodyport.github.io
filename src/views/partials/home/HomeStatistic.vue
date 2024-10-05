@@ -11,8 +11,8 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>+24,840</strong>
-        <p>دقیقه فیلم آموزشی</p>
+        <strong>144</strong>
+        <p>ساعت آموزش</p>
       </div>
     </div><!--.statistic-->
 
@@ -24,7 +24,7 @@
       </div>
       <div class="stat-data">
         <strong>6</strong>
-        <p>دوره آموزشی فعال</p>
+        <p>دوره </p>
       </div>
     </div><!--.statistic-->
 
@@ -36,7 +36,7 @@
       </div>
       <div class="stat-data">
         <strong>30,361</strong>
-        <p>دانشجوی دوره</p>
+        <p>دانشجوی </p>
       </div>
     </div><!--.statistic-->
 
@@ -51,7 +51,7 @@
       </div>
       <div class="stat-data">
         <strong>4.5</strong>
-        <p>میانگین امتیاز</p>
+        <p> امتیاز</p>
       </div>
     </div><!--.statistic-->
 
@@ -72,51 +72,68 @@ export default {
     align-items: center;
     margin-top: 100px;
     margin-bottom: 100px;
-    .statistic {
+  }
+
+  .statistic {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    strong {
+      font-weight: bold;
+      font-size: 32px;
+      direction: ltr;
+      display: block;
+      text-align: right;
+      line-height: 34px;
+    }
+    .stat-icon {
+      background: #E8EFFF;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      strong {
-        font-weight: bold;
-        font-size: 42px;
-        direction: ltr;
-        display: block;
-        text-align: right;
-        line-height: 34px;
+      padding: 10px;
+      border-radius: 10px;
+      svg {
+        width: 24px;
+        height: 24px;
       }
-      .stat-icon {
-        background: #E8EFFF;
-        display: flex;
+      p {
+        font-weight: 200;
+      }
+    }
+
+    &.course-count .stat-icon {
+      background: #FFE3FF;
+    }
+
+    &.student-count .stat-icon{
+      background: #FFECEE;
+    }
+
+    &.teach-rate .stat-icon{
+      background: #FCF8E2;
+    }
+
+
+  }
+
+  @media screen and ( min-width: 320px ){
+    #statistics{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and ( min-width: 600px ){
+    .statistic{
+      .stat-icon{
         padding: 15px;
         border-radius: 20px;
         svg {
           width: 42px;
           height: 42px;
         }
-        p {
-          font-weight: 200;
-        }
       }
-
-      &.course-count .stat-icon {
-        background: #FFE3FF;
+      strong{
+        font-size: 42px;
       }
-
-      &.student-count .stat-icon{
-        background: #FFECEE;
-      }
-
-      &.teach-rate .stat-icon{
-        background: #FCF8E2;
-      }
-
-
-    }
-  }
-
-  @media screen and ( min-width: 600px ){
-    #statistics{
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 
