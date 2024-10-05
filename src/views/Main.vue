@@ -246,6 +246,7 @@ export default {
 
   .ide {
     margin-top: 15px;
+    margin-bottom: 15px;
     direction: ltr;
     background: #151718;
     color: #FFF;
