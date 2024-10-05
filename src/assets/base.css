@@ -4,6 +4,8 @@
   --color-primary: #4951e1;
   --color-primary-hover: #3840dd;
   --color-background: #FFFFFF;
+  --color-error: #FF0000;
+  --color-success: #0EB582;
 }
 
 *,
@@ -19,5 +21,27 @@ body {
   background: var(--color-background);
   font-family: YekanBakh, serif;
   direction: rtl;
+}
+
+a{
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #3c3c3c;
+  padding: 8px 15px;
+  border-radius: 10px;
+  gap: 5px;
+  color: #FFF;
+  transition: .3s;
+  font-weight: 200;
+}
+
+.btn-primary {
+  background: var(--color-primary);
 }
 
