@@ -14,6 +14,8 @@
       <div class="code-background" :style="'background-image: url(\'' + code_background + '\')'"></div>
       <div class="header-right">
         <picture>
+          <source srcset="~@/assets/images/hamedmoody-curved.avif" type="image/avif">
+          <source srcset="~@/assets/images/hamedmoody-curved.webp" type="image/webp">
           <img src="~@/assets/images/hamedmoody-curved.png" alt="Hamed Moodi" width="562" height="732">
         </picture>
         <div class="float-cursor float-cursor-php">
@@ -84,7 +86,7 @@
 <script>
 import code_background from '@/assets/images/Header-backround.png';
 export default {
-  name: "Main",
+  name: "HomeHeader",
   data() {
     return {
       code_background: code_background,
@@ -130,168 +132,168 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  #header{
+#header{
+  position: relative;
+  overflow: hidden;
+  .header-curve{
+    position: absolute;
+    width: 300px;
+    height: auto;
+  }
+  #header-content{
     position: relative;
-    overflow: hidden;
-    .header-curve{
+    z-index: 2;
+    display: grid;
+    //grid-template-columns: 440px auto;
+    align-items: center;
+    gap: 30px;
+    .code-background{
+      content: "";
       position: absolute;
-      width: 300px;
-      height: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: left center;
+      opacity: .1;
+      z-index: -1;
     }
-    #header-content{
-      position: relative;
-      z-index: 2;
-      display: grid;
-      //grid-template-columns: 440px auto;
-      align-items: center;
-      gap: 30px;
-      .code-background{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background-repeat: no-repeat;
-        background-position: left center;
-        opacity: .1;
-        z-index: -1;
-      }
-    }
-    .header-right{
-      position: relative;
-      text-align: center;
-      picture{
-        img{
-          max-width: 100%;
-          height: auto;
-        }
-      }
-    }
-    .header-left{
-      h1{
-        font-weight: bold;
-        font-size: 42px;
-      }
-      .header-subtitle{
-        color: #989898;
-      }
-      .header-text{
-        line-height: 200%;
-        margin: 25px 0;
-        p{
-          margin-top: 15px;
-        }
-      }
-      .see-courses {
-        background: var(--color-primary);
-        color: #FFF;
-        text-decoration: none;
-        border-radius: 40px;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 5px 10px 5px 20px;
-        box-shadow: 0 3px 6px rgba(0,0,0,.16);
-        transition: 0.3s;
-        &:hover{
-          background: var(--color-primary-hover);
-        }
-      }
-    }
-
-    .float-cursor {
-      position: absolute;
-      direction: ltr;
-      text-align: left;
-      transition: .5s ease-in-out;
-      &.float-cursor-php{
-        top: 40%;
-        left: 56%;
-      }
-      &.float-cursor-wp{
-        top: 60%;
-        left: 46%;
-        .float-cursor-content{
-          background: #DFFF00;
-          color: black;
-        }
-        svg path{
-          fill: #DFFF00;
-        }
-      }
-    }
-
-    .float-cursor-content {
-      background: var(--color-primary);
-      border: 1px solid #ffffff57;
-      color: #FFF;
-      padding: 7px 20px 7px 10px;
-      border-radius: 40px;
-      margin-left: 20px;
-      box-shadow: 0 3px 6px rgba(0,0,0,.16);
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
+  }
+  .header-right{
+    position: relative;
+    text-align: center;
+    picture{
       img{
-        width: 32px;
+        max-width: 100%;
         height: auto;
       }
     }
-
-
   }
-
-  .ide {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    direction: ltr;
-    background: #151718;
-    color: #FFF;
-    border-radius: 15px;
-    padding: 15px;
-    .ide-header {
-      display: flex;
-      align-items: center;
-      gap: 11px;
+  .header-left{
+    h1{
+      font-weight: bold;
+      font-size: 42px;
     }
-    .ide-dots{
-      display: flex;
+    .header-subtitle{
+      color: #989898;
+    }
+    .header-text{
+      line-height: 200%;
+      margin: 25px 0;
+      p{
+        margin-top: 15px;
+      }
+    }
+    .see-courses {
+      background: var(--color-primary);
+      color: #FFF;
+      text-decoration: none;
+      border-radius: 40px;
+      display: inline-flex;
       align-items: center;
       gap: 5px;
-      position: relative;
-      span {
-        background: #FF5F56;
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        border-radius: 50%;
-        &:nth-child(2) {
-          background: #FFBD2E;
-        }
-        &:nth-child(3) {
-          background: #27C93F;
-        }
-      }
-
-      .ide-content {
-        padding: 10px 0 0 10px;
+      padding: 5px 10px 5px 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16);
+      transition: 0.3s;
+      &:hover{
+        background: var(--color-primary-hover);
       }
     }
   }
 
-  @media screen and ( min-width: 996px ){
-    #header #header-content{
-      grid-template-columns: 360px auto;
+  .float-cursor {
+    position: absolute;
+    direction: ltr;
+    text-align: left;
+    transition: .5s ease-in-out;
+    &.float-cursor-php{
+      top: 40%;
+      left: 56%;
+    }
+    &.float-cursor-wp{
+      top: 60%;
+      left: 46%;
+      .float-cursor-content{
+        background: #DFFF00;
+        color: black;
+      }
+      svg path{
+        fill: #DFFF00;
+      }
     }
   }
 
-  @media screen and ( min-width: 1366px ){
-    #header #header-content{
-      grid-template-columns: 440px auto;
+  .float-cursor-content {
+    background: var(--color-primary);
+    border: 1px solid #ffffff57;
+    color: #FFF;
+    padding: 7px 20px 7px 10px;
+    border-radius: 40px;
+    margin-left: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    img{
+      width: 32px;
+      height: auto;
     }
   }
+
+
+}
+
+.ide {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  direction: ltr;
+  background: #151718;
+  color: #FFF;
+  border-radius: 15px;
+  padding: 15px;
+  .ide-header {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .ide-dots{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    span {
+      background: #FF5F56;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border-radius: 50%;
+      &:nth-child(2) {
+        background: #FFBD2E;
+      }
+      &:nth-child(3) {
+        background: #27C93F;
+      }
+    }
+
+    .ide-content {
+      padding: 10px 0 0 10px;
+    }
+  }
+}
+
+@media screen and ( min-width: 996px ){
+  #header #header-content{
+    grid-template-columns: 360px auto;
+  }
+}
+
+@media screen and ( min-width: 1366px ){
+  #header #header-content{
+    grid-template-columns: 440px auto;
+  }
+}
 
 </style>
