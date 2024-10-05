@@ -31,11 +31,13 @@ export default {
       fetch(url)
           .then(response => response.json())
           .then( (data) => {
-            console.log(data);
+            //console.log(data);
             _this.courses = data;
             _this.fetching = false;
           })
-          .catch(error => console.error('Error:', error));
+          .catch( (error) => {
+            console.error('Error:', error)
+          } );
     }
   }
 }
