@@ -44,7 +44,7 @@
       <div class="header-left">
         <h1>حامد مودی</h1>
         <p class="header-subtitle">
-          و وردپرس PHP متخصص برنامه نویسی
+          برنامه نویس PHP، افزونه نویس و طراح قالب وردپرس
         </p>
         <div class="header-text">
           <p>
@@ -58,9 +58,11 @@
           </p>
         </div>
         <a href="https://www.daneshjooyar.com/teacher/hamedmoody/" class="see-courses" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30.098" height="34.524" viewBox="0 0 30.098 34.524">
-            <path id="Polygon_1" data-name="Polygon 1" d="M13.792,6.05a4,4,0,0,1,6.94,0L31.088,24.108a4,4,0,0,1-3.47,5.99H6.905a4,4,0,0,1-3.47-5.99Z" transform="translate(30.098) rotate(90)" fill="#fff"/>
-          </svg>
+          <span class="see-course-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30.098" height="34.524" viewBox="0 0 30.098 34.524">
+              <path id="Polygon_1" data-name="Polygon 1" d="M13.792,6.05a4,4,0,0,1,6.94,0L31.088,24.108a4,4,0,0,1-3.47,5.99H6.905a4,4,0,0,1-3.47-5.99Z" transform="translate(30.098) rotate(90)" fill="#fff"/>
+            </svg>
+          </span>
           دوره های آموزشی من
         </a>
 
@@ -278,11 +280,12 @@ export default {
         background: #27C93F;
       }
     }
-
-    .ide-content {
-      padding: 10px 0 0 10px;
-    }
   }
+
+  .ide-content {
+    padding: 10px 0 0 10px;
+  }
+
 }
 
 @media screen and ( min-width: 996px ){
