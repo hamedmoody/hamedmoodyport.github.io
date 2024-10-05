@@ -46,10 +46,14 @@
         </p>
         <div class="header-text">
           <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
+            زمینه هایی که در گذشته کار کردم بیشتر در حوزه گرافیک مثل فتوشاپ و افترافکتز بود ولی کم کم وارد حوزه برنامه نویسی شدم و بعد از یادگیری تخصصی Html,Css,Js,jQuery و حتی طراحی رابط کاربری (با فتوشاپ و Adobe Xd) وارد حوزه Backend با زبان PHP شدم .
+            از بین فریم ورک ها و Cms ها رفتم سراغ وردپرس و به صورت تخصصی در حوزه Plugin Development و Theme Development فعالیت کردم.
+            در حال حاضر هم به بزرگترین نمونه کارم یعنی سیستم هسته دانشجویار میتونم اشاره کنم و فعالیت شغلی هم در دانشجویار (هم تدریس و هم کدنویسی) ادامه داره
+            <br>
+            شیوه تدریس بنده هم از پایه با ارائه جزئیات که سعی میکنم کامل یه موضوعی رو پله پله به مخاطب انتقال بدم
           </p>
         </div>
-        <a href="#" class="see-courses">
+        <a href="https://www.daneshjooyar.com/teacher/hamedmoody/" class="see-courses" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="30.098" height="34.524" viewBox="0 0 30.098 34.524">
             <path id="Polygon_1" data-name="Polygon 1" d="M13.792,6.05a4,4,0,0,1,6.94,0L31.088,24.108a4,4,0,0,1-3.47,5.99H6.905a4,4,0,0,1-3.47-5.99Z" transform="translate(30.098) rotate(90)" fill="#fff"/>
           </svg>
@@ -88,9 +92,17 @@ export default {
       let max               = 80;
       let rand_left         = Math.floor(Math.random() * (max - min + 1) + min);
       let rand_top          = Math.floor(Math.random() * (max - min + 1) + min);
-      let rand_time         = Math.floor(Math.random() * (15 - 5 + 1) + 5);
-      cursor_el.style.left  = rand_left + '%';
-      cursor_el.style.top   = rand_top + '%';
+      let rand_time         = Math.floor(Math.random() * (10 - 5 + 1) + 3);
+
+      let left_style            = rand_left + '%';
+      let top_style             = rand_top + '%';
+
+      if( window.innerWidth <= 768 && rand_left > 50 ){
+        left_style  = `calc( ${left_style} - 200px )`;
+      }
+
+      cursor_el.style.left  = left_style;
+      cursor_el.style.top   = top_style;
 
       setTimeout( this.cursor_animate, rand_time * 1000, cursor_el );
 
@@ -113,7 +125,7 @@ export default {
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-columns: 480px auto;
+      //grid-template-columns: 440px auto;
       align-items: center;
       gap: 30px;
       .code-background{
@@ -131,6 +143,7 @@ export default {
     }
     .header-right{
       position: relative;
+      text-align: center;
       picture{
         img{
           max-width: 100%;
@@ -159,12 +172,18 @@ export default {
         align-items: center;
         gap: 5px;
         padding: 5px 10px 5px 20px;
+        box-shadow: 0 3px 6px rgba(0,0,0,.16);
+        transition: 0.3s;
+        &:hover{
+          background: var(--color-primary-hover);
+        }
       }
     }
 
     .float-cursor {
       position: absolute;
       direction: ltr;
+      text-align: left;
       transition: .5s ease-in-out;
       &.float-cursor-php{
         top: 40%;
@@ -204,4 +223,17 @@ export default {
 
 
   }
+
+  @media screen and ( min-width: 996px ){
+    #header #header-content{
+      grid-template-columns: 360px auto;
+    }
+  }
+
+  @media screen and ( min-width: 1366px ){
+    #header #header-content{
+      grid-template-columns: 440px auto;
+    }
+  }
+
 </style>
