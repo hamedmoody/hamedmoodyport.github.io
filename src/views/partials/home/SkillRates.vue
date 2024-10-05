@@ -12,7 +12,7 @@
         
         <div v-for="(skill, skill_index) in skills" class="rate" :key="skill_index">
           <picture>
-            <img :src="skill.icon" alt="">
+            <img :src="skill.icon" :alt="skill.label" loading="lazy" width="64" height="64">
           </picture>
           <strong>{{skill.label}}</strong>
           <p>{{skill.amount}}%</p>

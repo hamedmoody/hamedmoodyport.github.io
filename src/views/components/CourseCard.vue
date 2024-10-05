@@ -1,7 +1,7 @@
 <template>
   <a class="course" :href="course.url">
     <picture>
-      <img :src="course.thumbnail" :alt="course.title" width="1920" height="1098">
+      <img :src="course.thumbnail" :alt="course.title" width="1920" height="1098" loading="lazy">
     </picture>
     <h3>{{course.title}}</h3>
 
