@@ -11,8 +11,10 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>144</strong>
-        <p>ساعت آموزش</p>
+        <strong>+145</strong>
+        <p>
+          ساعت آموزش
+        </p>
       </div>
     </div><!--.statistic-->
 
@@ -24,7 +26,10 @@
       </div>
       <div class="stat-data">
         <strong>6</strong>
-        <p>دوره </p>
+        <p>
+          دوره
+          <span class="show-on-large">آموزشی</span>
+        </p>
       </div>
     </div><!--.statistic-->
 
@@ -35,8 +40,11 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>30,361</strong>
-        <p>دانشجوی </p>
+        <strong>+30,000</strong>
+        <p>
+          دانشجو
+          <span class="show-on-large">ی دوره</span>
+        </p>
       </div>
     </div><!--.statistic-->
 
@@ -51,7 +59,10 @@
       </div>
       <div class="stat-data">
         <strong>4.5</strong>
-        <p> امتیاز</p>
+        <p>
+          <span class="show-on-large">میانگین </span>
+          امتیاز
+        </p>
       </div>
     </div><!--.statistic-->
 

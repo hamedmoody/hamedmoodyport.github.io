@@ -45,3 +45,12 @@ a{
   background: var(--color-primary);
 }
 
+.show-on-large{
+  display: none;
+}
+
+@media screen and ( min-width: 992px ){
+  .show-on-large{
+    display: initial;
+  }
+}
