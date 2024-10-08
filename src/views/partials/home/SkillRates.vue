@@ -48,14 +48,9 @@ export default {
       icon_background: icon_background,
       skills: [
         {
-          icon    : icon_html,
-          label   : 'Html',
-          amount  : 95,
-        },
-        {
-          icon    : icon_css,
-          label   : 'Css',
-          amount  : 88,
+          icon    : icon_php,
+          label   : 'PHP',
+          amount  : 99,
         },
         {
           icon    : icon_mysql,
@@ -68,24 +63,25 @@ export default {
           amount  : 94,
         },
         {
-          icon    : icon_git,
-          label   : 'Git',
-          amount  : 78,
+          icon    : icon_html,
+          label   : 'Html',
+          amount  : 95,
         },
         {
-          icon    : icon_php,
-          label   : 'PHP',
-          amount  : 99,
+          icon    : icon_css,
+          label   : 'Css',
+          amount  : 88,
         },
         {
           icon    : icon_javascript,
           label   : 'JavaScript',
           amount  : 68,
         },
+
         {
-          icon    : icon_xd,
-          label   : 'Adobe Xd',
-          amount  : 100,
+          icon    : icon_git,
+          label   : 'Git',
+          amount  : 78,
         },
         {
           icon    : icon_github,
@@ -97,6 +93,14 @@ export default {
           label   : 'VueJs',
           amount  : 80,
         },
+
+        {
+          icon    : icon_xd,
+          label   : 'Adobe Xd',
+          amount  : 100,
+        },
+
+
       ],
     }
   }
@@ -132,6 +136,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    direction: ltr;
   }
 
   .rate-col-right{
