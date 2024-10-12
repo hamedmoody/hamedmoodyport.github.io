@@ -11,7 +11,7 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>+145</strong>
+        <strong>+418</strong>
         <p>
           ساعت آموزش
         </p>
