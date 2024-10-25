@@ -11,7 +11,7 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>+418</strong>
+        <strong>+444</strong>
         <p>
           ساعت آموزش
         </p>
@@ -25,7 +25,7 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>6</strong>
+        <strong>8</strong>
         <p>
           دوره
           <span class="show-on-large">آموزشی</span>
@@ -40,7 +40,7 @@
         </svg>
       </div>
       <div class="stat-data">
-        <strong>+30,000</strong>
+        <strong>+30,500</strong>
         <p>
           دانشجو
           <span class="show-on-large">ی دوره</span>
